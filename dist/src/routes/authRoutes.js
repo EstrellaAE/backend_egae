@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
+const authController_1 = require("../controllers/authController");
 /*
 *Clase para funcionalidad de rutas Login
 */
@@ -11,9 +12,7 @@ class AuthRoutes {
         this.config();
     }
     config() {
-        this.router.get('/', (req, res) => {
-            res.send('Invocando Autenticacion');
-        });
+        this.router.post('/', authController_1.authController.iniciarSesion);
     }
 }
 const authRoutes = new AuthRoutes();
