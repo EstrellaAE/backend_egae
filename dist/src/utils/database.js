@@ -8,7 +8,7 @@ const pool = promise_mysql_1.default.createPool({
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: 'root',
+    password: '',
     database: 'apliweb'
 });
 exports.default = {
@@ -17,4 +17,4 @@ exports.default = {
     },
     database: pool
 };
-//# sourceMappingURL=connection.js.map
+//# sourceMappingURL=database.js.map

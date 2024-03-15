@@ -1,21 +1,19 @@
-import { Router, RouterOptions } from "express";
-import { authController } from "../controllers/authController";
-/* 
-*Clase para funcionalidad de rutas Login
-*/
-class AuthRoutes {
-    //Objeto de tipo Router
-    public router: Router;
+import {Router, RouterOptions} from 'express';
+import { authController } from '../controllers/authController';
 
-    //Inicializa
+class AuthRoutes{
+
+    public router :Router;
+
     constructor(){
-        this.router = Router();
+        this.router=Router();
         this.config();
     }
-    
-    config() {
-        this.router.post('/', authController.iniciarSesion);        
+
+    config(){
+        this.router.post('/', authController.iniciarSesion); 
     }
 }
-const authRoutes = new AuthRoutes();
+
+const authRoutes=new AuthRoutes();
 export default authRoutes.router;

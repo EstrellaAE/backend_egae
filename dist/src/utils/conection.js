@@ -5,16 +5,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const promise_mysql_1 = __importDefault(require("promise-mysql"));
 const pool = promise_mysql_1.default.createPool({
-    host: 'localhost',
+    host: '127.0.0.1',
     port: 3306,
     user: 'root',
-    password: 'root',
+    password: '123456',
     database: 'apliweb'
 });
-exports.default = {
-    keys: {
-        secret: ')(/&%$webintegral$#&/%'
-    },
-    database: pool
-};
-//# sourceMappingURL=connection.js.map
+exports.default = pool;
+//# sourceMappingURL=conection.js.map
